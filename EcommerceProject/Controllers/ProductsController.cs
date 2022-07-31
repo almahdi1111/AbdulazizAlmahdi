@@ -30,21 +30,17 @@ namespace EcommerceProject.Controllers
         // GET: Products
         public IActionResult Index()
         {
-            var appDbContext = productsRepo.GetProducts();
+            var appDbContext = productsRepo.GetAll();
             return View(appDbContext.ToList());
         }
 
         // GET: Products/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
 
-            var product = await _context.products
-                .Include(p => p.user)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var product = productsRepo.GetByID(id);
+
+
             if (product == null)
             {
                 return NotFound();
@@ -69,7 +65,7 @@ namespace EcommerceProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                productsRepo.InsertProduct(product);
+                productsRepo.Insert(product);
                 productsRepo.Save();
                 return RedirectToAction(nameof(Index));
             }
@@ -82,7 +78,7 @@ namespace EcommerceProject.Controllers
         {
 
 
-            var product = productsRepo.GetProductByID(id);
+            var product = productsRepo.GetByID(id);
             if (product == null)
             {
                 return NotFound();
@@ -107,7 +103,7 @@ namespace EcommerceProject.Controllers
             {
                 try
                 {
-                    productsRepo.UpdateProduct(product);
+                    productsRepo.Update(product);
                     productsRepo.Save();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -132,7 +128,7 @@ namespace EcommerceProject.Controllers
         {
           
 
-            var product = productsRepo.GetProductByID(id);
+            var product = productsRepo.GetByID(id);
 
             if (product == null)
             {
@@ -147,14 +143,14 @@ namespace EcommerceProject.Controllers
         [ValidateAntiForgeryToken]
         public  IActionResult DeleteConfirmed(int id)
         {
-            var product = productsRepo.GetProductByID(id);
-            productsRepo.DeleteProduct(id);
+            var product = productsRepo.GetByID(id);
+            productsRepo.Delete(id);
             return RedirectToAction(nameof(Index));
         }
 
         private bool ProductExists(int id)
         {
-            return (productsRepo.GetProductByID(id)!=null);
+            return (productsRepo.GetByID(id)!=null);
         }
     }
 }

@@ -18,6 +18,8 @@ namespace Infrastructure
         {
             service.AddDbContext<AppDbContext>(option => option.UseSqlServer(@"Data Source=THARWATEXAM\SQL2019STD;Initial Catalog=AlmahdiExam;Persist Security Info=True;User ID=sa;Password=Yemen@134"));
             service.AddScoped<IProductsRepo, ProductRepo>();
+            service.AddScoped<IUserRepo, UserRepo>();
+
         }
     }
 }

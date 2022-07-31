@@ -9,11 +9,11 @@ namespace Domain.Interfaces
 {
     public interface IUserRepo
     {
-        IEnumerable<Application_User> GetUsers();
-        Application_User GetUserByID(int UserId);
-        void InsertUser(Application_User User);
-        void DeleteUser(int UserID);
-        void UpdateUser(Application_User User);
+        IEnumerable<Application_User> GetAll();
+        Application_User GetByID(int UserId);
+        void Insert(Application_User User);
+        void Delete(int UserID);
+        void Update(Application_User User);
         void Save();
     }
 }

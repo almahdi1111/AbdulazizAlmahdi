@@ -16,7 +16,7 @@ namespace Infrastructure.Repo
             _context = context;
         }
 
-        public void DeleteProduct(int productID)
+        public void Delete(int productID)
         {
             Product product = _context.products.Find(productID);
             if (product != null)
@@ -27,17 +27,17 @@ namespace Infrastructure.Repo
             }
         }
 
-        public Product GetProductByID(int productId)
+        public Product GetByID(int productId)
         {
             return _context.products.Find(productId);
         }
 
-        public IEnumerable<Product> GetProducts()
+        public IEnumerable<Product> GetAll()
         {
             return _context.products.ToList();
         }
 
-        public void InsertProduct(Product product)
+        public void Insert(Product product)
         {
             _context.products.Add(product);
         }
@@ -47,7 +47,7 @@ namespace Infrastructure.Repo
             _context.SaveChanges();
         }
 
-        public void UpdateProduct(Product product)
+        public void Update(Product product)
         {
             _context.Entry(product).State = EntityState.Modified;
         }

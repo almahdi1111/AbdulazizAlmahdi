@@ -9,11 +9,11 @@ namespace Domain.Interfaces
 {
     public interface ICategoriesRepo
     {
-        IEnumerable<ProductsCategories> GetCategories();
-        ProductsCategories GetCategoriesByID(int CategoriesId);
-        void InsertCategories(ProductsCategories Categories);
-        void DeleteCategories(int CategoriesID);
-        void UpdateCategories(ProductsCategories Categories, int Id);
+        IEnumerable<ProductsCategories> GetAll();
+        ProductsCategories GetByID(int CategoriesId);
+        void Insert(ProductsCategories Categories);
+        void Delete(int CategoriesID);
+        void Update(ProductsCategories Categories);
         void Save();
 
     }

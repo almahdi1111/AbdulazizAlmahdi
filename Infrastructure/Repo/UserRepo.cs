@@ -18,7 +18,7 @@ namespace Infrastructure.Repo
             _context = context;
         } 
 
-        public void DeleteUser(int UserID)
+        public void Delete(int UserID)
         {
             Application_User User = _context.Users.Find(UserID);
             if (User != null)
@@ -29,17 +29,17 @@ namespace Infrastructure.Repo
             }
         }
 
-        public Application_User GetUserByID(int UserId)
+        public Application_User GetByID(int UserId)
         {
             return _context.Users.Find(UserId);
         }
 
-        public IEnumerable<Application_User> GetUsers()
+        public IEnumerable<Application_User> GetAll()
         {
             return _context.Users.ToList();
         }
 
-        public void InsertUser(Application_User User)
+        public void Insert(Application_User User)
         {
             _context.Users.Add(User);
         }
@@ -49,7 +49,7 @@ namespace Infrastructure.Repo
             _context.SaveChanges();
         }
 
-        public void UpdateUser(Application_User User)
+        public void Update(Application_User User)
         {
             _context.Entry(User).State = EntityState.Modified;
         }

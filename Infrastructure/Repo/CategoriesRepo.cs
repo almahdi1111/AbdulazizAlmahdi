@@ -1,5 +1,7 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
+using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,34 +12,44 @@ namespace Infrastructure.Repo
 {
     public class CategoriesRepo : ICategoriesRepo
     {
-        public void DeleteCategories(int CategoriesID)
+        AppDbContext _context;
+
+        public CategoriesRepo(AppDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public void Delete(int CategoriesID)
+        {
+            ProductsCategories categories = _context.categories.Find(CategoriesID);
+            if (categories != null)
+                _context.categories.Remove(categories);
+
+
         }
 
-        public IEnumerable<ProductsCategories> GetCategories()
+        public IEnumerable<ProductsCategories> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.categories.ToList();
         }
 
-        public ProductsCategories GetCategoriesByID(int CategoriesId)
+        public ProductsCategories GetByID(int CategoriesId)
         {
-            throw new NotImplementedException();
+            return _context.categories.Find(CategoriesId);
         }
 
-        public void InsertCategories(ProductsCategories Categories)
+        public void Insert(ProductsCategories Categories)
         {
-            throw new NotImplementedException();
+            _context.Add(Categories);
         }
 
         public void Save()
         {
-            throw new NotImplementedException();
+            _context.SaveChanges();
         }
 
-        public void UpdateCategories(ProductsCategories Categories, int Id)
+        public void Update(ProductsCategories Categories)
         {
-            throw new NotImplementedException();
+            _context.Entry(Categories).State = EntityState.Modified;
         }
     }
 }

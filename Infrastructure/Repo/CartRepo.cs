@@ -1,5 +1,7 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
+using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,34 +12,65 @@ namespace Infrastructure.Repo
 {
     public class CartRepo : ICartRepo
     {
-        public void Deletecart(int cartID)
+        private AppDbContext _context;
+        public CartRepo(AppDbContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public void Delete(int cartID)
+        {
+            Cart cart = _context.carts.Find(cartID);
+            if (cart != null)
+                _context.carts.Remove(cart);
+            else
+            {
+
+            }
         }
 
-        public Cart GetcartByID(int cartId)
+        public Cart GetByID(int cartId)
         {
-            throw new NotImplementedException();
+            return _context.carts.Find(cartId);
+         }
+
+        public IEnumerable<Cart> GetAll()
+        {
+           return _context.carts.ToList();
         }
 
-        public IEnumerable<Cart> Getcarts()
+        public void Insert(Cart cart)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Insertcart(Cart cart)
-        {
-            throw new NotImplementedException();
+            _context.carts.Add(cart);
         }
 
         public void Save()
         {
-            throw new NotImplementedException();
+            _context.SaveChanges(); 
         }
 
-        public void Updatecart(Cart cart, int Id)
+        public void Update(Cart cart)
         {
-            throw new NotImplementedException();
+            _context.Entry(cart).State = EntityState.Modified;
+        }
+      
+        private bool disposed = false;
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.disposed)
+            {
+                if (disposing)
+                {
+                    _context.Dispose();
+                }
+            }
+            this.disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }

@@ -9,11 +9,11 @@ namespace Domain.Interfaces
 {
     public interface ICartRepo
     {
-        IEnumerable<Cart> Getcarts();
-        Cart GetcartByID(int cartId);
-        void Insertcart(Cart cart);
-        void Deletecart(int cartID);
-        void Updatecart(Cart cart, int Id);
+        IEnumerable<Cart> GetAll();
+        Cart GetByID(int cartId);
+        void Insert(Cart cart);
+        void Delete(int cartID);
+        void Update(Cart cart);
         void Save();
     }
 }

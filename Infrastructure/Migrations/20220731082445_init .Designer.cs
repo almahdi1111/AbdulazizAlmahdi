@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220731080229_init ")]
+    [Migration("20220731082445_init ")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

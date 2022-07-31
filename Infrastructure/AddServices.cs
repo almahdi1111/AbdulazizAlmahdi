@@ -14,7 +14,7 @@ namespace Infrastructure
 
         public static void AddDbContextService(IServiceCollection service)
         {
-            service.AddDbContext<AppDbContext>(option => option.UseSqlServer(@"Data Source=THARWATEXAM\SQL2019STD;Persist Security Info=True;User ID=sa;Password=YEMEN@134"));
+            service.AddDbContext<AppDbContext>(option => option.UseSqlServer(@"Data Source=THARWATEXAM\SQL2019STD;Initial Catalog=AlmahdiExam;Persist Security Info=True;User ID=sa;Password=Yemen@134"));
 
         }
     }

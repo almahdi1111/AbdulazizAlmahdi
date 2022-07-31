@@ -20,6 +20,12 @@ namespace Domain.Entities
                 return Price * Quantity;
             }
         }
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        public int IdProducts { get; set; }
+
+        Product product { get; set; }
+        public int CartId { get; set; }
+        public virtual Cart cart { get; set; }
 
 
     }

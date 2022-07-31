@@ -28,8 +28,10 @@ namespace Domain.Entities
         [Required(ErrorMessage = "يرجى اعادة ادخال كلمة المرور"), Compare("Password", ErrorMessage = "كلمة المرور غير متطابقة")]
         public string PasswordConfirm { get; set; }
         public int Type { get; set; }
-       /* public virtual ICollection<Support_Messages> messages { get; set; }
-        public virtual ICollection<User> Users { get; set; }
-*/
+        public virtual Cart cart { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<ProductsCategories> ProductsCategories { get; set; }
+
+
     }
 }

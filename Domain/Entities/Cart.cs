@@ -12,6 +12,9 @@ namespace Domain.Entities
         [Key]
         public int Id { get; set; }
         public double TotalPrice { get; set; }
+        public int UserId { get; set; }
+        public virtual ICollection<CartItem> CartItems { get; set; }
+
 
     }
 }

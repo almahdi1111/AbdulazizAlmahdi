@@ -157,3 +157,8 @@ C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\
 C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\EcommerceProject.pdb
 C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\EcommerceProject.genruntimeconfig.cache
 C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\ref\EcommerceProject.dll
+C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Categories\Create.cshtml.g.cs
+C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Categories\Delete.cshtml.g.cs
+C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Categories\Details.cshtml.g.cs
+C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Categories\Edit.cshtml.g.cs
+C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Categories\Index.cshtml.g.cs

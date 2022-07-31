@@ -162,3 +162,8 @@ C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\
 C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Categories\Details.cshtml.g.cs
 C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Categories\Edit.cshtml.g.cs
 C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Categories\Index.cshtml.g.cs
+C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Carts\Create.cshtml.g.cs
+C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Carts\Delete.cshtml.g.cs
+C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Carts\Details.cshtml.g.cs
+C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Carts\Edit.cshtml.g.cs
+C:\Users\train5\source\repos\EcommerceProject\EcommerceProject\obj\Debug\net5.0\Razor\Views\Carts\Index.cshtml.g.cs

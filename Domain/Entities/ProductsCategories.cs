@@ -15,8 +15,10 @@ namespace Domain.Entities
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+        [ForeignKey("Application_User")]
         public int UserId { get; set; }
         public virtual Application_User user { get; set; }
+        public virtual ICollection<Product> products { get; set; }
 
 
 

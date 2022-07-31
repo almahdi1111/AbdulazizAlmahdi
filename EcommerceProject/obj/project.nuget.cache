@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ejEErz6KrmnzgaZ25rygYtqima6azGXw4eTJWDeVRZi8+PHBpXvn2zFIMTzrrPknIM5EetTkZsdYFLiFsV6NVQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\train5\\source\\repos\\EcommerceProject\\EcommerceProject\\EcommerceProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\train5\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

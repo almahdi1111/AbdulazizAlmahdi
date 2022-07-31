@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
-    public interface ICartItemItemRepo
+    public interface ICartItemRepo
     {
         IEnumerable<CartItem> GetCartItems();
         CartItem GetCartItemByID(int CartItemId);
@@ -17,4 +17,4 @@ namespace Domain.Interfaces
         void Save();
     }
 }
-}
+

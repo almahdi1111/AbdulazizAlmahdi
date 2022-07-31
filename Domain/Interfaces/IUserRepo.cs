@@ -13,7 +13,7 @@ namespace Domain.Interfaces
         Application_User GetUserByID(int UserId);
         void InsertUser(Application_User User);
         void DeleteUser(int UserID);
-        void UpdateUser(Application_User User, int Id);
+        void UpdateUser(Application_User User);
         void Save();
     }
 }

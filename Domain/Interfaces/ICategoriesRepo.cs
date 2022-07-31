@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
-    public interface ICategories
+    public interface ICategoriesRepo
     {
         IEnumerable<ProductsCategories> GetCategories();
         ProductsCategories GetCategoriesByID(int CategoriesId);

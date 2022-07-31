@@ -13,7 +13,7 @@ namespace Domain.Interfaces
         Product GetProductByID(int productId);
         void InsertProduct(Product product);
         void DeleteProduct(int productID);
-        void UpdateProduct(Product product,int Id);
+        void UpdateProduct(Product product);
         void Save();
     }
 }

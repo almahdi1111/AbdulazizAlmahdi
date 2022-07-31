@@ -13,6 +13,7 @@ namespace Domain.Entities
         public int Id { get; set; }
         public double TotalPrice { get; set; }
         public int UserId { get; set; }
+        public virtual Application_User User { get; set; }
         public virtual ICollection<CartItem> CartItems { get; set; }
 
 

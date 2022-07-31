@@ -33,5 +33,6 @@ namespace Domain.Entities
         public virtual ICollection<ProductsCategories> ProductsCategories { get; set; }
 
 
+
     }
 }

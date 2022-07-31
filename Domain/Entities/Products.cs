@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,10 +23,11 @@ namespace Domain.Entities
         
         public int DiscountPercentage { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
-        public int IdUser { get; set; }
-
+        [ForeignKey("Application_User")]
+        public int UserId { get; set; }
         public Application_User user { get; set; }
-        public int IdCategories { get; set; }
+        [ForeignKey("ProductsCategories")]
+        public int CategoriesId { get; set; }
         public virtual ProductsCategories Categorie { get; set; }
 
 
